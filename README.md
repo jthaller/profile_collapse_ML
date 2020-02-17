@@ -10,3 +10,6 @@ My first thought was, why don't I just apply gradient descent to it? But it's a 
 
 ## Defining a Loss Function
 This is really the hardest part of the problem, and is something I've been ruminating on for a few days. Clearly the loss function needs to encapsulate how close together the points are to one another, but only how close they are to the points they are supposed to be next to. So my first approach will to sum the distances of each point to its nearest neighbor on the r axis (xy collapsed) and then on the z axis.  With this loss function defined I may be able to manipulate into an more tensorial form with which I can apply some machine learning like gradient descent. 
+
+### Update
+This is turning out now to be a good way to measure loss. I've found that worse guesses often have a smaller loss than good guesses. I think this is because a bad guess might spead points with a similiar z value out across xy, but that's not being encapsulated in the calculation. It's only seeing how close the nearest z neighbor. It's a pain in the ass, but I think I'll need to do binning.
