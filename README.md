@@ -1,7 +1,7 @@
 # profile_collapse_auto
 A matlab function to end the world's most boring video game (as coined by Kate Jensen)
 
-As part of my undergraduate thesis, I used fluorescent confocal microscopy to map the outline of tiny beads of sand sunk into silicone. One step of the process was to collapse a 3d image into a 2d side profile (add picture). Part of the tidium involved navigating to the exact best position that showcased this profile. The goal of this project is to replace this process with an automated one.
+As part of my undergraduate thesis, I used fluorescent confocal microscopy to map the outline of tiny beads of sand sunk into silicone. One step of the process was to collapse a 3d image into a 2d side profile ![side profile](https://github.com/jthaller/profile_collapse_ML/blob/master/proper_scaling.png) . Part of the tidium involved navigating to the exact best position that showcased this profile. The goal of this project is to replace this process with an automated one.
 
 ## Design
 My first thought was, why don't I just apply gradient descent to it? But it's a much more complicated problem. There is no correct solution against which you can compare the current position. Instead, you are trying to find the optimal solution - where all the data points are nice and close to each other and allow you to clearly see the outline of the bead.
